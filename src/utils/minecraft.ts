@@ -1,4 +1,8 @@
 import Rcon from "rcon-srcds";
+import dotenv from "dotenv";
+
+//Configures environment variables
+dotenv.config();
 
 const IP = process.env.MINECRAFT_IP_ADDRESS;
 const PORT = process.env.MINECRAFT_RCON_PORT;
