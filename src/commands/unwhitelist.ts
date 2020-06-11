@@ -4,6 +4,11 @@ import fs from "fs";
 import { User } from "../types/user";
 import { minecraftUnwhitelist } from "../utils/minecraft";
 
+/**
+ * @description The function that runs when the unwhitelist command is called
+ * @param {Message} message - Discord message of the command
+ * @param {string[]} args -  arguments of the command
+ */
 export const unwhitelistCommand = async (
   message: Message,
   args: string[]

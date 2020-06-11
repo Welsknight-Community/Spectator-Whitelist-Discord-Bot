@@ -3,6 +3,11 @@ import { User } from "../types/user";
 import * as MinecraftAPI from "minecraft-api";
 import fs from "fs";
 
+/**
+ * @description The function that runs when the check command is called
+ * @param {Message} message - Discord message of the command
+ * @param {string[]} args -  arguments of the command
+ */
 export const checkCommand = async (
   message: Message,
   args: string[]

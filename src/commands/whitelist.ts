@@ -8,6 +8,11 @@ import { minecraftWhitelist } from "../utils/minecraft";
 const GAME_SERVER = process.env.GAME_SERVER_ID;
 const NEXUS_TOKEN = process.env.NEXUS_WHITELIST_ACCESS_TOKEN;
 
+/**
+ * @description The function that runs when the whitelist command is called
+ * @param {Message} message - Discord message of the command
+ * @param {string[]} args -  arguments of the command
+ */
 export const whitelistCommand = async (
   message: Message,
   args: string[]

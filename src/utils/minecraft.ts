@@ -1,12 +1,14 @@
-import dotenv from "dotenv";
 import Rcon from "rcon-srcds";
-
-dotenv.config();
 
 const IP = process.env.MINECRAFT_IP_ADDRESS;
 const PORT = process.env.MINECRAFT_RCON_PORT;
 const PASSWORD = process.env.MINECRAFT_RCON_PASSWORD;
 
+/**
+ * @description Whitelist username on the Minecraft server and adds username to spectator group
+ * @param {string} username - Username to be whitelisted and set to spectator mode
+ * @returns {Promise<boolean>} - The success of the whitelisting
+ */
 export const minecraftWhitelist = async (
   username: string
 ): Promise<boolean> => {
@@ -26,6 +28,11 @@ export const minecraftWhitelist = async (
   }
 };
 
+/**
+ * @description Unwhitelist username on the Minecraft server
+ * @param {string} username - Username to be unwhitelisted
+ * @returns {Promise<boolean>} - The success of the unwhitelisting
+ */
 export const minecraftUnwhitelist = async (
   username: string
 ): Promise<boolean> => {

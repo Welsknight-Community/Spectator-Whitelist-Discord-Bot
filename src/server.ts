@@ -4,6 +4,7 @@ import { whitelistCommand } from "./commands/whitelist";
 import { unwhitelistCommand } from "./commands/unwhitelist";
 import { checkCommand } from "./commands/check";
 
+//Configures environment variables
 dotenv.config();
 
 const DISCORD_TOKEN = process.env.DISCORD_BOT_ACCESS_TOKEN;
@@ -12,6 +13,7 @@ const PREFIX = process.env.PREFIX;
 
 const client = new Client();
 
+//Verfies the necessary tokens are in the config
 if (DISCORD_TOKEN == "" || NEXUS_TOKEN == "") {
   console.warn("No Discord or Nexus Whitelist Token Supplied!");
 } else {
