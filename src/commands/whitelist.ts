@@ -4,6 +4,10 @@ import fs from "fs";
 import { User } from "../types/user";
 import axios, { AxiosRequestConfig } from "axios";
 import { minecraftWhitelist } from "../utils/minecraft";
+import dotenv from "dotenv";
+
+//Configures environment variables
+dotenv.config();
 
 const GAME_SERVER = process.env.GAME_SERVER_ID;
 const NEXUS_TOKEN = process.env.NEXUS_WHITELIST_ACCESS_TOKEN;
