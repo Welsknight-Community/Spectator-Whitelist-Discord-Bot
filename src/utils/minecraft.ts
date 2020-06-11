@@ -16,7 +16,9 @@ export const minecraftWhitelist = async (
     await server.authenticate(PASSWORD);
     console.log(`Authenticated on  ${IP}:${PORT}`);
     server.execute("whitelist add " + username);
-    console.log(`Whitelisted username on ${IP}:${PORT}`);
+    console.log(`Whitelisted ${username} on ${IP}:${PORT}`);
+    server.execute(`lp user ${username} parent set spectators`);
+    console.log(`Set ${username} to Spectator Mode on ${IP}:${PORT}`);
     return true;
   } catch {
     console.log(`Failed to whitelist username on ${IP}:${PORT}`);
